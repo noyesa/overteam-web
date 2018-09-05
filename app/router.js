@@ -7,6 +7,7 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('team-builder', { path: '/' });
 });
 
 export default Router;

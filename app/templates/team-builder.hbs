@@ -1,0 +1,40 @@
+<h2>Team Builder</h2>
+
+<form>
+  <label>
+    Add battletag(s):
+    {{input value=battletagInput}}
+  </label>
+  <button {{action "addBattletag"}}>Add</button>
+</form>
+
+{{#if profiles}}
+  <table>
+    <thead>
+      <tr>
+        <th>Portrait</th>
+        <th>Username</th>
+        <th>SR</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each profiles as |profile|}}
+        <tr class="team-builder__row">
+          <td class="team-builder__portrait">
+            {{#if profile.portrait}}
+              <img src={{profile.portrait}} width="64" height="64"/>
+            {{/if}}
+          </td>
+          <td>{{profile.username}}</td>
+          <td>{{profile.skillRating}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+    <tfoot>
+      <tr>
+        <th class="team-builder__average-header" colspan="2">Average:</th>
+        <th>{{averageSR}}</th>
+      </tr>
+    </tfoot>
+  </table>
+{{/if}}

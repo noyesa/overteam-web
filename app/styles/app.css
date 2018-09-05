@@ -1,0 +1,14 @@
+body {
+  font-family: system-ui;
+}
+
+.team-builder__average-header {
+  text-align: left;
+}
+
+.team-builder__portrait {
+  width: 64px;
+  height: 64px;
+  padding: 5px;
+  margin: 0;
+}
